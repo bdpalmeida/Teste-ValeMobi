@@ -1,8 +1,8 @@
 <?php
-    define('MYSQL_HOST', 'localhost');
-    define('MYSQL_USER', 'root');
-    define('MYSQL_PASSWORD', 'admin');
-    define('MYSQL_DB_NAME', 'Negociacao_Mercadorias');
+    define('MYSQL_HOST', 'mysql.hostinger.com.br');
+    define('MYSQL_USER', 'u360591317_root');
+    define('MYSQL_PASSWORD', 'NM_admin');
+    define('MYSQL_DB_NAME', 'u360591317_nm');
     
     try
     {
