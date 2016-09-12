@@ -9,7 +9,7 @@
     <form id="cadastro" name="cadastro" onsubmit="return validaCampo();" method="post" action="cad_operacao2.php">
         <p><label>Tipo da mercadoria: </label><select id="tipo" name="tipo">
             <?php
-                $sql = "SELECT * FROM Mercadoria";
+                $sql = "SELECT * FROM vwMercadoria";
 
                 $resultado = $PDO->query($sql);
 
@@ -22,7 +22,7 @@
         </p>
         <p><label>Nome da mercadoria: </label><select id="nome" name="nome">
             <?php
-                $sql = "SELECT * FROM Mercadoria";
+                $sql = "SELECT * FROM vwMercadoria";
 
                 $resultado = $PDO->query($sql);
 
@@ -33,8 +33,8 @@
             ?>
             </select>
         </p>
-        <p><label>Quantidade: </label><input type="number" id="quantidade" name="quantidade" min="1" step="1" onselect="precoTotal()"/></p>
-        <p><label>Tipo negociação: </label>
+        <p><label>Quantidade: </label><input type="number" id="quantidade" name="quantidade" min="1" step="1" placeholder="0"/></p>
+        <p><label>Tipo da negociação: </label>
             <select id="negociacao" name="negociacao">
                 <option value="Compra">Compra</option>
                 <option value="Venda">Venda</option>

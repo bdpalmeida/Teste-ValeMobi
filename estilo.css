@@ -25,7 +25,7 @@ hr{border: 0; height: 3px; background-image: linear-gradient(to right, lightgray
 
 h2, h3, h6, p{ color: black; }
 
-#rodape{position: absolute; bottom: 15px; margin-top: 10px; }
+#rodape{position: absolute; bottom: 15px; right: 16px; }
 
 
 input{margin: 3px; padding: 3px; height: 35px; background-color: whitesmoke; position: relative; border: none; color: black; }
@@ -40,21 +40,6 @@ input{margin: 3px; padding: 3px; height: 35px; background-color: whitesmoke; pos
 select{margin: 3px; padding: 3px; height: 35px; width: 200px; background-color: whitesmoke; position: relative; border: none; color: black; }
 
 
-table{border: 2px solid black; padding: 10px; }
-
-table td {border: 1px solid #eee; padding: 3px; }
-
-
-
-
-button.tempoP{margin: 10px; height: 40px; width: 50px; border: 2px solid white; border-bottom-style: solid; }
-
-button.iniciar, button.parar {position: static; margin: 5px; height: 30px; width: 30px; }
-
-button.iniciar {border-left: 30px solid blue; border-bottom: 15px solid transparent; border-top: 15px solid transparent; border-right: 1px solid transparent; }
-
-button.parar {border-left: 30px solid red; border-bottom: 1px solid red; border-top: 1px solid red; border-right: 1px solid red; }
-
-
-
-#span { width: 150px; }
+table{border: 2px solid black; border-collapse: collapse; }
+th{border: 2px solid black; padding: 10px; background-color: orange; color: white; }
+td, tr{border: 2px solid black; padding: 10px; }

@@ -7,13 +7,10 @@ CREATE TABLE Mercadoria
 (cod_Mercadoria INT PRIMARY KEY AUTO_INCREMENT, tipo_Mercadoria VARCHAR(100), nome_Mercadoria VARCHAR(100),
  quant_Mercadoria INT, preco_Mercadoria DOUBLE);
 
-#Indices para tabela Mercadoria
-CREATE INDEX nome_Mercadoria ON Mercadoria(nome_Mercadoria(10));
-
 #Views para tabela Mercadoria
 CREATE OR REPLACE VIEW vwMercadoria AS 
-	SELECT cod_Mercadoria, nome_Mercadoria FROM Mercadoria ORDER BY nome_Mercadoria;
-#select * from vwMercadoria;
+	SELECT tipo_Mercadoria, nome_Mercadoria FROM Mercadoria ORDER BY tipo_Mercadoria;
+#SELECT * FROM vwMercadoria;
 
 
 #Estrutura tabela Operacao
@@ -25,5 +22,5 @@ ALTER TABLE Operacao ADD FOREIGN KEY(cod_Mercadoria) REFERENCES Mercadoria(cod_M
 
 #View para tabela Operacao
 CREATE OR REPLACE VIEW vwOperacao AS 
-	SELECT cod_Mercadoria, tipo_Mercadoria, nome_Mercadoria, quantidade, preco, tipo_negocio FROM Operacao NATURAL JOIN Mercadoria;
-#select * from vwOperacao;
+	SELECT tipo_Mercadoria, nome_Mercadoria, quantidade, preco, tipo_negocio FROM Operacao NATURAL JOIN Mercadoria;
+#SELECT * FROM vwOperacao;
